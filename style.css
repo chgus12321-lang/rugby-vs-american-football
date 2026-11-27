@@ -128,3 +128,27 @@
 #start h1 strong {
     text-shadow: 0 0 30px rgba(249, 115, 22, 0.5);
 }
+/* 시작 버튼 디자인 및 애니메이션 */
+#begin {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+    cursor: pointer;
+}
+
+#begin:hover {
+    transform: scale(1.06);
+    background: #ffffff;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+#begin:active {
+    transform: scale(0.97);
+}
+
+#begin:focus-visible {
+    outline: 3px solid #6ee7b7;
+    outline-offset: 5px;
+}   
