@@ -100,4 +100,97 @@
         padding: 12px 6px;
         font-size: 12px;
     }
+}   /* 시작 화면 배경 및 조명 효과 개선 */
+#start {
+    background:
+        radial-gradient(
+            ellipse at 20% 40%,
+            rgba(16, 185, 129, 0.22),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at 80% 40%,
+            rgba(249, 115, 22, 0.22),
+            transparent 50%
+        ),
+        linear-gradient(
+            135deg,
+            #071a15 0%,
+            #080e17 50%,
+            #24150c 100%
+        );
+}
+
+#start h1 em {
+    text-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
+}
+
+#start h1 strong {
+    text-shadow: 0 0 30px rgba(249, 115, 22, 0.5);
+}
+/* 시작 버튼 디자인 및 애니메이션 */
+#begin {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+    cursor: pointer;
+}
+
+#begin:hover {
+    transform: scale(1.06);
+    background: #ffffff;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+#begin:active {
+    transform: scale(0.97);
+}
+
+#begin:focus-visible {
+    outline: 3px solid #6ee7b7;
+    outline-offset: 5px;
 }   
+/* 시작 화면 공 애니메이션 */
+#hybrid {
+    animation: ballFloat 3s ease-in-out infinite;
+}
+
+@keyframes ballFloat {
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -15px;
+    }
+}
+
+/* 모션 감소 설정 대응 */
+@media (prefers-reduced-motion: reduce) {
+    #hybrid {
+        animation: none;
+    }
+}
+/* 경기장 화면 전환 애니메이션 */
+#stadium.active {
+    animation: stadiumFadeIn 0.6s ease-out;
+}
+
+@keyframes stadiumFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 모션 감소 설정 대응 */
+@media (prefers-reduced-motion: reduce) {
+    #stadium.active {
+        animation: none;
+    }
+}
