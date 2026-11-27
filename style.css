@@ -100,4 +100,31 @@
         padding: 12px 6px;
         font-size: 12px;
     }
-}   
+}   /* 시작 화면 배경 및 조명 효과 개선 */
+#start {
+    background:
+        radial-gradient(
+            ellipse at 20% 40%,
+            rgba(16, 185, 129, 0.22),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at 80% 40%,
+            rgba(249, 115, 22, 0.22),
+            transparent 50%
+        ),
+        linear-gradient(
+            135deg,
+            #071a15 0%,
+            #080e17 50%,
+            #24150c 100%
+        );
+}
+
+#start h1 em {
+    text-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
+}
+
+#start h1 strong {
+    text-shadow: 0 0 30px rgba(249, 115, 22, 0.5);
+}
